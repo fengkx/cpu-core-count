@@ -3,11 +3,36 @@
   "version": "0.1.0",
   "description": "Get Cpu Core count in or outside docker container",
   "bin": "./dist/bin.js",
+  "main": "./dist/node.cjs",
+  "module": "./dist/node.mjs",
+  "types": "./dist/node.d.ts",
   "files": [
     "dist",
     "tsdoc-metadata.json"
   ],
   "exports": {
+    ".": {
+      "node": {
+        "types": "./dist/node.d.ts",
+        "import": "./dist/node.mjs",
+        "require": "./dist/node.cjs"
+      },
+      "bun": {
+        "types": "./dist/bun.d.ts",
+        "import": "./dist/bun.mjs",
+        "require": "./dist/bun.cjs"
+      },
+      "deno": {
+        "types": "./dist/deno.d.ts",
+        "import": "./dist/deno.mjs",
+        "require": "./dist/deno.cjs"
+      },
+      "default": {
+        "types": "./dist/node.d.ts",
+        "import": "./dist/node.mjs",
+        "require": "./dist/node.cjs"
+      }
+    },
     "./node": {
       "types": "./dist/node.d.ts",
       "import": "./dist/node.mjs",
