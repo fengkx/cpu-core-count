@@ -17,8 +17,13 @@ import { createGetAvailableCPUs } from "./core/get-cpus";
  * console.log(await coreCount()) // print 1.5 inside docker with --cpus 1.5
  * ```
  * @public
+ *
+ * @remarks
  * Return current available CPU count
- * can be a non integer in docker container (--cpus command in docker configure CFS scheduler)
+ *
+ * it can be a non integer in docker container (--cpus command in docker configure CFS scheduler)
+ *
+ * @link {https://docs.docker.com/config/containers/resource_constraints/#configure-the-default-cfs-scheduler}
  */
 export const coreCount = createGetAvailableCPUs(
   {

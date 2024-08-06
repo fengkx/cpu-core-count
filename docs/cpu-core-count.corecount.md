@@ -14,11 +14,17 @@ coreCount: (() => Promise<number>);
 
 Promise&lt;number&gt;
 
+## Remarks
+
+Return current available CPU count
+
+it can be a non integer in docker container (--cpus command in docker configure CFS scheduler)
+
+{<!-- -->https://docs.docker.com/config/containers/resource\_constraints/\#configure-the-default-cfs-scheduler<!-- -->}
+
 ## Example
 
 ```js
 console.log(await coreCount()); // print 12
 console.log(await coreCount()); // print 1.5 inside docker with --cpus 1.5
 ```
-
-Return current available CPU count can be a non integer in docker container (--cpus command in docker configure CFS scheduler)

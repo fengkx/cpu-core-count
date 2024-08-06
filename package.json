@@ -25,7 +25,9 @@
   },
   "scripts": {
     "prepare": "npx simple-git-hooks",
-    "build": "bunchee",
+    "doc": "api-extractor run --local && api-documenter markdown --input-folder ./temp/ --output-folder ./docs",
+    "postdoc": "npm run format",
+    "build": "bunchee && npm run doc",
     "format": "dprint fmt **/*.{ts,md,json,dockerfile}",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
