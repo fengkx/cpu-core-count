@@ -27,10 +27,11 @@
   "scripts": {
     "prepare": "npx simple-git-hooks",
     "prepublishOnly": "npm run build",
-    "doc": "api-extractor run --local && api-documenter markdown --input-folder ./temp/ --output-folder ./docs",
+    "doc": "mkdirp etc && api-extractor run --local && api-documenter markdown --input-folder ./temp/ --output-folder ./docs",
     "postdoc": "npm run format",
     "build": "bunchee && npm run doc",
     "format": "dprint fmt **/*.{ts,md,json,dockerfile}",
+    "pretest": "npm run build",
     "test": "node tests/test.mjs"
   },
   "sideEffects": "false",
@@ -49,6 +50,7 @@
     "@types/node": "^22.1.0",
     "bunchee": "^5.3.1",
     "dprint": "^0.47.2",
+    "mkdirp": "^3.0.1",
     "simple-git-hooks": "^2.11.1",
     "typescript": "^5.5.4"
   },
