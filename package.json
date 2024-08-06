@@ -31,7 +31,7 @@
     "postdoc": "npm run format",
     "build": "bunchee && npm run doc",
     "format": "dprint fmt **/*.{ts,md,json,dockerfile}",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node tests/test.mjs"
   },
   "sideEffects": "false",
   "author": "fengkx",
@@ -42,6 +42,7 @@
   ],
   "license": "MIT",
   "devDependencies": {
+    "@jsdevtools/ez-spawn": "^3.0.4",
     "@microsoft/api-documenter": "^7.25.10",
     "@microsoft/api-extractor": "^7.47.5",
     "@types/bun": "^1.1.6",
