@@ -1,6 +1,6 @@
 {
   "name": "cpu-core-count",
-  "version": "0.1.0-alpha.1",
+  "version": "0.1.0-alpha.3",
   "description": "Get Cpu Core count in or outside docker container",
   "bin": "./dist/bin.js",
   "files": [
