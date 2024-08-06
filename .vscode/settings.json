@@ -1,3 +1,4 @@
 {
-  "editor.defaultFormatter": "dprint.dprint"
+  "editor.defaultFormatter": "dprint.dprint",
+  "files.associations": { "api-extractor.json": "jsonc" }
 }
