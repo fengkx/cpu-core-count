@@ -1,4 +1,4 @@
-import { access, readFile } from "fs/promises";
+import { access, readFile } from "node:fs/promises";
 import { cpus } from "node:os";
 
 import { createGetAvailableCPUs } from "./core/get-cpus";
