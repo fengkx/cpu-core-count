@@ -1,6 +1,6 @@
 {
   "name": "cpu-core-count",
-  "version": "0.1.0-alpha.3",
+  "version": "0.1.0",
   "description": "Get Cpu Core count in or outside docker container",
   "bin": "./dist/bin.js",
   "files": [
@@ -36,6 +36,9 @@
   },
   "sideEffects": "false",
   "author": "fengkx",
+  "repository": {
+    "url": "https://github.com/fengkx/cpu-core-count"
+  },
   "keywords": [
     "docker",
     "container",
