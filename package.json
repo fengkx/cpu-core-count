@@ -1,6 +1,6 @@
 {
   "name": "cpu-core-count",
-  "version": "0.1.0-alpha.0",
+  "version": "0.1.0-alpha.1",
   "description": "Get Cpu Core count in or outside docker container",
   "bin": "./dist/bin.js",
   "files": [
@@ -26,6 +26,7 @@
   },
   "scripts": {
     "prepare": "npx simple-git-hooks",
+    "prepublishOnly": "npm run build",
     "doc": "api-extractor run --local && api-documenter markdown --input-folder ./temp/ --output-folder ./docs",
     "postdoc": "npm run format",
     "build": "bunchee && npm run doc",
